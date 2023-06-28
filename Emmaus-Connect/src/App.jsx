@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginForm from "./components/PageLogin";
 import Menu from "./components/Menu";
+import PrixTel from "./components/PrixTel";
+import Chatmembre from "./components/Chatmembre";
+import AjouterTel from "./components/AjouterTel";
 import "./App.css";
 
 function App() {
@@ -10,6 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="/Menu" element={<Menu />} />
+          <Route path="/Menu/PrixTel" element={<PrixTel />} />
+          <Route path="/Menu/Chatmembre" element={<Chatmembre/>} />
+          <Route path="/Menu/AjouterTel" element={<AjouterTel/>} />
         </Routes>
       </div>
     </Router>
