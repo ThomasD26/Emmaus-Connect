@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
     <main className="mainHomes">
+      <Link className="banniere" to='/Menu'> Make Desicion</Link>
       <form className="labelStyles">
-        <h1 className="bigTitle">make decision</h1>
         <label>
           <div className="Username">
             <input
