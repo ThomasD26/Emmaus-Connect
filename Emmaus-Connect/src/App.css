@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  position: relative;
+  padding-bottom: 75px;
 }
 
 .mainHomes {
@@ -55,11 +57,10 @@ body {
 }
 
 .mainHome{
-    background-color:rgb(245, 245, 245);
+    background-image: linear-gradient(to bottom, #bef3f6, #a7f2f7, #8ef2f8, #6ff1f9, #42f0fa);
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .mainHome :hover{
@@ -67,7 +68,7 @@ body {
 }
 
 .banniere {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #f9f1f1, #f9f2f6, #f4f3fc, #ecf6fe, #e8f9fa);    
     margin: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -147,7 +148,8 @@ body {
 .footer {
     position: fixed;
     bottom: 0;
-    background-image: linear-gradient(to right top, #32d0d5, #00bfd5, #00add3, #009acd, #1587c3);    width: 100%;
+    background-image: linear-gradient(to bottom, #42f0fa, #41dfe8, #40ced6, #3ebdc4, #3cadb3);
+    width: 100%;
     height: 75px;
   }
 
@@ -169,4 +171,56 @@ body {
    background-image: linear-gradient(to right top, #ffe3e3, #f6d8d8, #edcdcd, #e4c3c3, #dbb8b8);
  }
  
+ ul, ol {
+    list-style: none;
+    pointer-events: none;
+  }
+
+h1{
+    background-image: linear-gradient(to bottom, #e5fcfd, #dcfafb, #d2f8f9, #c8f5f8, #bef3f6);
+    display: flex;
+    justify-content: center;
+}
+
+.phoneCard {
+    padding-top: 15px;
+    padding-right: 15px;
+    flex-basis: 50%;
+    box-sizing: border-box; 
+}
+
+.Phonename{
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Phone-info{
+    text-align: start;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Phone-info2{
+    text-align: start;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tables {
+    list-style: none;
+  }
   
+  .tables, .Phone-info, .Phone-info2 {
+    background-color: hsl(0, 0%, 75%);
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
