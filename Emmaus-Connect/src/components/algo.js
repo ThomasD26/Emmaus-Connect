@@ -1,5 +1,3 @@
-import React from "react";
-
 function calculerValeurTelephone(
   ram,
   stockage,
@@ -14,6 +12,10 @@ function calculerValeurTelephone(
     2: 20,
     3: 30,
     4: 40,
+    5:50,
+    6:60,
+    7:70,
+    8:80,
   };
   const valeursStockage = {
     8: 1,
