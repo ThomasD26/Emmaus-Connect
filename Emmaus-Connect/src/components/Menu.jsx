@@ -5,18 +5,18 @@ export default function Menu() {
     <main>
       <h1 className="banniere">Emmaüs-Connect</h1>
       <div className="mainHome">
-        <Link className="Creer" to="/Menu/PrixTel">
-          <h2 className="TitreHome">Créer ta décision</h2>
+        <Link className="Creer" to="/Menu/phone">
+          <h2 className="TitreHome">Consulter la liste des téléphones disponible</h2>
           <p className="TexteHome">
           </p>
         </Link>
         <Link className="EnCours" to="/Menu/Chatmembre">
-          <h2 className="TitreHome">En cours de vote</h2>
+          <h2 className="TitreHome">messagerie instantanée</h2>
           <p className="TexteHome">
           </p>
         </Link>
         <Link className="VoteEnd" to="/Menu/AjouterTel">
-          <h2 className="TitreHome">Votation terminé</h2>
+          <h2 className="TitreHome">Rajoute un téléphone a la liste</h2>
           <p className="TexteHome">
           </p>
         </Link>
