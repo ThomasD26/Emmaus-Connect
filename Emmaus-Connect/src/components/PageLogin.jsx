@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
     <main className="mainHomes">
-      <form className="labelStyles">
-        <h1 className="bigTitle">make decision</h1>
+      <Link className="banniere" to='/Menu'>Emmaüs-Connect</Link>
+      <div className="labelStyles">
+        <div className="recalibrage"/>
         <label>
           <div className="Username">
-            <input
-              className="inputUsername"
+            <input className="UsernameS"
               type="username"
               name="username"
               placeholder="Adresse@mail.fr"
@@ -16,24 +17,21 @@ function LoginForm() {
           </div>
         </label>
         <label>
-          <div className="styles.Password">
-            <input
-              className="styles.inputPassword"
+          <div className="Password">
+            <input className="PasswordS"
               type="password"
               name="password"
               placeholder="Mot de passe"
             />
           </div>
         </label>
-        <div className="styles.login">
+        <div className="login">
           <button className="styles.button" type="submit">
             LOGIN
           </button>
-        </div>
-      </form>
-      <div>
-        <img src="./src/assets/makesenseaccueil.jpg" alt="connect" />
+          </div>
       </div>
+      <div className="footer"/>
     </main>
   );
 }
