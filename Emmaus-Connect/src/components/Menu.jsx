@@ -1,27 +1,18 @@
 import { Link } from "react-router-dom";
+import styles from "./menu.module.scss";
 
 export default function Menu() {
   return (
     <main>
-      <h1 className="banniere">Emmaüs-Connect</h1>
-      <div className="mainHome">
-        <Link className="Creer" to="/Menu/phone">
-          <h2 className="TitreHome">Consulter la liste des téléphones disponible</h2>
-          <p className="TexteHome">
-          </p>
+      <h1 className={styles.banniere}> De la rue a la Vie</h1>
+      <div className={styles.mainHome}>
+        <Link className={styles.Creer} to="/Phone">
+          <h2 className={styles.TitreHome}>Consulter la liste des téléphones disponible</h2>
         </Link>
-        <Link className="EnCours" to="/Menu/Chatmembre">
-          <h2 className="TitreHome">messagerie instantanée</h2>
-          <p className="TexteHome">
-          </p>
-        </Link>
-        <Link className="VoteEnd" to="/Menu/AjouterTel">
-          <h2 className="TitreHome">Rajoute un téléphone a la liste</h2>
-          <p className="TexteHome">
-          </p>
+        <Link className={styles.EnCours} to="/Menu/AjouterTel">
+          <h2 className={styles.TitreHome}>Rajoute un téléphone a la liste</h2>
         </Link>
       </div>
-      <div className="footer"/>
     </main>
   );
 }

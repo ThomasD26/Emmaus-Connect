@@ -31,7 +31,6 @@ function LoginForm() {
           </button>
           </div>
       </div>
-      <div className="footer"/>
     </main>
   );
 }

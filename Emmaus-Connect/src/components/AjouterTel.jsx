@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import styles from "./ajouterTel.module.scss";
 
 const AjouterTel = () => {
   const [state, setState] = useState({
@@ -72,8 +72,10 @@ const AjouterTel = () => {
 
     return (
       <main>
-      <Link className="banniere" to='/Menu'>Emmaüs-Connect</Link>
-      <div className="mainHome">
+        <h1 className={styles.banniere}>
+        Liste des téléphone
+        </h1>
+        <div>
       <form onSubmit={handleSubmit}>
         <label>
           Nom du téléphone:
@@ -223,7 +225,6 @@ const AjouterTel = () => {
         <button type="submit">Enregistrer</button>
       </form>
       </div>
-      <div className="footer"/>
       </main>
     );
 }

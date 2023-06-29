@@ -1,0 +1,14 @@
+footer {
+  background: rgba(25, 108, 132, 1);
+  width: 100%;
+  height: 75px;
+}
+
+footer,
+.creators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", fantasy;
+}
