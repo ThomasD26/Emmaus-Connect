@@ -1,46 +1,43 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
-class FormComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Phonename: "",
-      Systemeexploitation: "",
-      Marque: "",
-      Ram: "",
-      Memoire: "",
-      Reseau: "",
-      Ecran: "",
-      Etatglobal: "",
-      Etatecran: "",
-      Capacitebatterie: "",
-      Chargeur: "",
-    };
-  }
+const AjouterTel = () => {
+  const [state, setState] = useState({
+    Phonename: "",
+    Systemeexploitation: "",
+    Marque: "",
+    Ram: "",
+    Memoire: "",
+    Reseau: "",
+    Ecran: "",
+    Etatglobal: "",
+    Etatecran: "",
+    Capacitebatterie: "",
+    Chargeur: "",
+  });
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.value });
   };
 
-  handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = {
-      Phonename: this.state.Phonename,
-      Systemeexploitation: this.state.Systemeexploitation,
-      Marque: this.state.Marque,
-      Ram: this.state.Ram,
-      Memoire: this.state.Memoire,
-      Reseau: this.state.Reseau,
-      Ecran: this.state.Ecran,
-      Etatglobal: this.state.Etatglobal,
-      Etatecran: this.state.Etatecran,
-      Capacitebatterie: this.state.Capacitebatterie,
-      Chargeur: this.state.Chargeur,
+      Phonename: state.Phonename,
+      Systemeexploitation: state.Systemeexploitation,
+      Marque: state.Marque,
+      Ram: state.Ram,
+      Memoire: state.Memoire,
+      Reseau: state.Reseau,
+      Ecran: state.Ecran,
+      Etatglobal: state.Etatglobal,
+      Etatecran: state.Etatecran,
+      Capacitebatterie: state.Capacitebatterie,
+      Chargeur: state.Chargeur,
     };
 
-     try {
+    try {
       const response = await fetch("http://localhost:5000/api/phone", {
         method: "POST",
         headers: {
@@ -51,6 +48,20 @@ class FormComponent extends React.Component {
 
       if (response.ok) {
         console.log("Données enregistrées avec succès");
+        // Réinitialiser les valeurs des champs
+        setState({
+          Phonename: "",
+          Systemeexploitation: "",
+          Marque: "",
+          Ram: "",
+          Memoire: "",
+          Reseau: "",
+          Ecran: "",
+          Etatglobal: "",
+          Etatecran: "",
+          Capacitebatterie: "",
+          Chargeur: "",
+        });
       } else {
         throw new Error("Erreur lors de l'enregistrement des données");
       }
@@ -59,19 +70,18 @@ class FormComponent extends React.Component {
     }
   };
 
-  render() {
     return (
       <main>
       <Link className="banniere" to='/Menu'>Emmaüs-Connect</Link>
       <div className="mainHome">
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>
           Nom du téléphone:
           <input
             type="text"
             name="Phonename"
-            value={this.state.Phonename}
-            onChange={this.handleChange}
+            value={state.Phonename}
+            onChange={handleChange}
           />
         </label>
 
@@ -80,8 +90,8 @@ class FormComponent extends React.Component {
           <input
             type="text"
             name="Systemeexploitation"
-            value={this.state.Systemeexploitation}
-            onChange={this.handleChange}
+            value={state.Systemeexploitation}
+            onChange={handleChange}
           />
         </label>
 
@@ -90,8 +100,8 @@ class FormComponent extends React.Component {
           <input
             type="text"
             name="Marque"
-            value={this.state.Marque}
-            onChange={this.handleChange}
+            value={state.Marque}
+            onChange={handleChange}
           />
         </label>
 
@@ -99,8 +109,8 @@ class FormComponent extends React.Component {
           Ram :
           <select
             name="Ram"
-            value={this.state.Ram}
-            onChange={this.handleChange}
+            value={state.Ram}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="1">1GO</option>
@@ -118,8 +128,8 @@ class FormComponent extends React.Component {
           Memoire :
           <select
             name="Memoire"
-            value={this.state.Memoire}
-            onChange={this.handleChange}
+            value={state.Memoire}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="8">8GO</option>
@@ -137,8 +147,8 @@ class FormComponent extends React.Component {
           <input
             type="text"
             name="Reseau"
-            value={this.state.Reseau}
-            onChange={this.handleChange}
+            value={state.Reseau}
+            onChange={handleChange}
           />
         </label>
 
@@ -147,8 +157,8 @@ class FormComponent extends React.Component {
           <input
             type="text"
             name="Ecran"
-            value={this.state.Ecran}
-            onChange={this.handleChange}
+            value={state.Ecran}
+            onChange={handleChange}
           />
         </label>
 
@@ -156,8 +166,8 @@ class FormComponent extends React.Component {
           État global:
           <select
             name="Etatglobal"
-            value={this.state.Etatglobal}
-            onChange={this.handleChange}
+            value={state.Etatglobal}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="mauvais">Mauvais</option>
@@ -171,8 +181,8 @@ class FormComponent extends React.Component {
           État écran :
           <select
             name="Etatecran"
-            value={this.state.Etatecran}
-            onChange={this.handleChange}
+            value={state.Etatecran}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="rayé">rayé</option>
@@ -186,8 +196,8 @@ class FormComponent extends React.Component {
           Capacité batterie :
           <select
             name="Capacitebatterie"
-            value={this.state.Capacitebatterie}
-            onChange={this.handleChange}
+            value={state.Capacitebatterie}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="mauvais">Mauvais</option>
@@ -201,8 +211,8 @@ class FormComponent extends React.Component {
           Chargeur :
           <select
             name="Chargeur"
-            value={this.state.Chargeur}
-            onChange={this.handleChange}
+            value={state.Chargeur}
+            onChange={handleChange}
           >
             <option value="">Sélectionnez une option</option>
             <option value="oui">oui</option>
@@ -216,7 +226,6 @@ class FormComponent extends React.Component {
       <div className="footer"/>
       </main>
     );
-  }
 }
 
-export default FormComponent;
+export default AjouterTel;
