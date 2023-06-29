@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import calculerValeurTelephone from './algo.js';
+import { Link } from "react-router-dom";
 
 function PhoneApp() {
   const [phones, setPhones] = useState([]);
@@ -32,8 +33,10 @@ function PhoneApp() {
   };
 
 return (
-  <div>
-    <h1>Liste des téléphones</h1>{phones.map((phone) => (
+  <main>
+    <Link className="banniere" to='/Menu'>Emmaüs-Connect</Link>
+    <h1>Liste des téléphones</h1>
+    <div className="mainHome">{phones.map((phone) => (
       <div key={phone.ID}>
         
     <h2> s</h2>    <ul>
@@ -76,7 +79,9 @@ return (
         </ul>
       </div>
     ))}
-  </div>
+    </div>
+    <div className="footer"/>
+  </main>
 );
 }
 

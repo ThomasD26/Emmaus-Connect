@@ -55,7 +55,7 @@ body {
 }
 
 .mainHome{
-    background-color:black;
+    background-color:rgb(245, 245, 245);
     min-height: 100vh;
     display: flex;
     align-items: center;
