@@ -7,7 +7,11 @@ function header() {
   return (
     <nav className={styles.headLinks}>
       <Link to="/Menu">
-      <h1>Emmaüs-Connect</h1>
+      <img
+          className={styles.logo}
+          src="./src/assets/logo.png"
+          alt="make-sense"
+      />
       </Link>
       <div className={styles.Liens}>
         <Navbar />

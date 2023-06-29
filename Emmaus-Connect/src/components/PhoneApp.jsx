@@ -37,47 +37,45 @@ return (
     <h1 className={styles.banniere}>
         Liste des téléphone
     </h1>
-    <div className="mainHome">{phones.map((phone) => (
-      <div key={phone.ID} className='phoneCard'>
-    <h2> </h2>    <ul>
-          <li className='Phonename'>
-            Nom: {phone.Phonename}
+    <div className={styles.mainHome}>{phones.map((phone) => (
+      <ul key={phone.ID} className={styles.phoneCard}>
+          <li className={styles.Phonename}>
+            {phone.Phonename}
           </li> 
-          <li className='Phone-info'>  <ul className='tables'/>
+          <li className={styles.PhoneInfo}>  <ul className={styles.tables}/>
             Marque: {phone.Marque}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Système d'exploitation: {phone.Systemeexploitation}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             RAM: {phone.Ram}GB
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Stockage: {phone.Memoire}GB
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Réseau: {phone.Reseau}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Écran: {phone.Ecran}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             État global: {phone.Etatglobal}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             État de l'écran: {phone.Etatecran}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Capacité de la batterie: {phone.Capacitebatterie}
           </li>
-          <li className='Phone-info'>
+          <li className={styles.PhoneInfo}>
             Chargeur: {phone.Chargeur}
           </li>
-          <li className='Phone-info2'>
+          <li className={styles.PhoneInfo}>
             Valeur totale: {phone.valeurTotale}
           </li>
         </ul>
-      </div>
     ))}
     </div>
   </main>

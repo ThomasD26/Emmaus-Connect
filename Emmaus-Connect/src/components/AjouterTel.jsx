@@ -73,13 +73,15 @@ const AjouterTel = () => {
     return (
       <main>
         <h1 className={styles.banniere}>
-        Liste des téléphone
+        Rajouter un téléphone
         </h1>
-        <div>
-      <form onSubmit={handleSubmit}>
+        <div onSubmit={handleSubmit}>
+      <form>
+        <div className={styles.labelContainer}>
         <label>
           Nom du téléphone:
           <input
+            className={styles.case}
             type="text"
             name="Phonename"
             value={state.Phonename}
@@ -90,6 +92,7 @@ const AjouterTel = () => {
         <label>
           Système d'exploitation:
           <input
+            className={styles.case}
             type="text"
             name="Systemeexploitation"
             value={state.Systemeexploitation}
@@ -100,6 +103,7 @@ const AjouterTel = () => {
         <label>
           Marque:
           <input
+            className={styles.case}
             type="text"
             name="Marque"
             value={state.Marque}
@@ -110,6 +114,7 @@ const AjouterTel = () => {
               <label>
           Ram :
           <select
+            className={styles.case}
             name="Ram"
             value={state.Ram}
             onChange={handleChange}
@@ -129,6 +134,7 @@ const AjouterTel = () => {
               <label>
           Memoire :
           <select
+            className={styles.case}
             name="Memoire"
             value={state.Memoire}
             onChange={handleChange}
@@ -147,6 +153,7 @@ const AjouterTel = () => {
         <label>
           Réseau:
           <input
+            className={styles.case}
             type="text"
             name="Reseau"
             value={state.Reseau}
@@ -157,6 +164,7 @@ const AjouterTel = () => {
         <label>
           Écran:
           <input
+            className={styles.case}
             type="text"
             name="Ecran"
             value={state.Ecran}
@@ -167,6 +175,7 @@ const AjouterTel = () => {
               <label>
           État global:
           <select
+            className={styles.case}
             name="Etatglobal"
             value={state.Etatglobal}
             onChange={handleChange}
@@ -182,6 +191,7 @@ const AjouterTel = () => {
                       <label>
           État écran :
           <select
+            className={styles.case}
             name="Etatecran"
             value={state.Etatecran}
             onChange={handleChange}
@@ -197,6 +207,7 @@ const AjouterTel = () => {
                    <label>
           Capacité batterie :
           <select
+            className={styles.case}
             name="Capacitebatterie"
             value={state.Capacitebatterie}
             onChange={handleChange}
@@ -212,6 +223,7 @@ const AjouterTel = () => {
               <label>
           Chargeur :
           <select
+            className={styles.case}
             name="Chargeur"
             value={state.Chargeur}
             onChange={handleChange}
@@ -220,10 +232,16 @@ const AjouterTel = () => {
             <option value="oui">oui</option>
             <option value="non">non</option>
           </select>
-        </label>
-
-        <button type="submit">Enregistrer</button>
+        </label>  
+        </div>      
       </form>
+      <div className={styles.buttonContainer}>
+        <button
+          className={styles.recButton}
+          type="submit" >
+          Enregistrer
+        </button>
+      </div>
       </div>
       </main>
     );

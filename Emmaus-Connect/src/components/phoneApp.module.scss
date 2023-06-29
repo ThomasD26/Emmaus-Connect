@@ -5,3 +5,63 @@
     padding-bottom: 2%;
     padding-left: 1%;
 }
+
+.mainHome {
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+.phoneCard {
+    flex-basis: calc(50% - 2rem);
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 75%);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+
+.Phonename{
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 0px;
+}
+
+.PhoneInfo{
+    text-align: start;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: 1%; 
+}
+
+.PhoneInfo2{
+    text-align: start;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;  
+}
+
+// .tables {
+//     list-style: none;
+//   }
+  
+  .tables, .PhoneInfo, .PhoneInfo2 {
+    background-color: hsl(0, 0%, 75%);
+  }
