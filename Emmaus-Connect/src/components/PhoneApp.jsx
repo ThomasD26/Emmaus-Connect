@@ -37,43 +37,42 @@ return (
     <Link className="banniere" to='/Menu'>Emmaüs-Connect</Link>
     <h1>Liste des téléphones</h1>
     <div className="mainHome">{phones.map((phone) => (
-      <div key={phone.ID}>
-        
-    <h2> s</h2>    <ul>
-          <li>
+      <div key={phone.ID} className='phoneCard'>
+    <h2> </h2>    <ul>
+          <li className='Phonename'>
             Nom: {phone.Phonename}
-          </li>
-          <li>
+          </li> 
+          <li className='Phone-info'>  <ul className='tables'/>
             Marque: {phone.Marque}
           </li>
-          <li>
+          <li className='Phone-info'>
             Système d'exploitation: {phone.Systemeexploitation}
           </li>
-          <li>
+          <li className='Phone-info'>
             RAM: {phone.Ram}GB
           </li>
-          <li>
+          <li className='Phone-info'>
             Stockage: {phone.Memoire}GB
           </li>
-          <li>
+          <li className='Phone-info'>
             Réseau: {phone.Reseau}
           </li>
-          <li>
+          <li className='Phone-info'>
             Écran: {phone.Ecran}
           </li>
-          <li>
+          <li className='Phone-info'>
             État global: {phone.Etatglobal}
           </li>
-          <li>
+          <li className='Phone-info'>
             État de l'écran: {phone.Etatecran}
           </li>
-          <li>
+          <li className='Phone-info'>
             Capacité de la batterie: {phone.Capacitebatterie}
           </li>
-          <li>
+          <li className='Phone-info'>
             Chargeur: {phone.Chargeur}
           </li>
-          <li>
+          <li className='Phone-info2'>
             Valeur totale: {phone.valeurTotale}
           </li>
         </ul>
