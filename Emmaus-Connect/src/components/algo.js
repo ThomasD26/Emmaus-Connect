@@ -69,13 +69,16 @@ function calculerValeurTelephone(
 
   // Attribution de la lettre correspondante en fonction de la valeur totale
   let lettreValeurTotale;
-  if (valeurTotale >= 60 && valeurTotale <= 100) {
-    lettreValeurTotale = "C";
+  if (valeurTotale >= 40 && valeurTotale <= 100) {
+    lettreValeurTotale = "40 to 80€";
   } else if (valeurTotale > 101 && valeurTotale <= 175) {
-    lettreValeurTotale = "B";
+    lettreValeurTotale = "80 to 150€";
   } else if (valeurTotale > 176) {
-    lettreValeurTotale = "A";
+    lettreValeurTotale = "150 to 250€";
+  } else if (valeurTotale > 220) {
+    lettreValeurTotale = "+250€";
   }
+
 
   return lettreValeurTotale;
 }

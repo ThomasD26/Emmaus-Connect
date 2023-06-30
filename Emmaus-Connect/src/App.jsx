@@ -14,8 +14,8 @@ function App() {
       <div className={styles.appContainer}>
         <Header />
         <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="/Menu" element={<Menu />} />
+          <Route path="/" element={<PhoneApp />} />
+          <Route path="/Menu" element={<PhoneApp />} />
           <Route path="/Phone" element={<PhoneApp />} />
           <Route path="/Menu/AjouterTel" element={<AjouterTel/>} />
         </Routes>

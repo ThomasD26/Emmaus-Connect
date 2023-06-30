@@ -1,5 +1,5 @@
 .banniere {
-    background-color: #FFF30D;
+    background-color: #FFCC38;
     margin: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -13,48 +13,69 @@
     padding: 2%;
   }
 
-.phoneCard {
+  .phoneCard {
     flex-basis: calc(50% - 2rem);
     box-sizing: border-box;
-    background-color: hsl(0, 0%, 75%);
+    background-color: #EBEBEB;
     margin: 1rem;
     display: flex;
     flex-direction: column;
     padding-inline-start: 0px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-  }
+    border: 2px solid #000000;
+  }  
   
+  .PhoneValue {
+    flex-grow: 1;
+    flex-basis: 10%;
+    font-family: roboto;
+    color: black;
+    font-weight: bold;
+  }
+
+  .phoneInfoItem {
+    flex-basis: 50%;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-family: roboto;
+    color: black;
+    font-weight: bold;
+  }
 
 .Phonename{
     text-align: center;
     font-weight: bold;
     background-color: black;
-    color: white;
+    color: #EBEBEB;
     font-size: 2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Roboto;
     padding-top: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-left: 0px;
 }
 
-.PhoneInfo{
-    text-align: start;
-    font-size: 1.2em;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    margin-left: 1%; 
+.PhoneInfo {
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+  font-size: 1.2em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Roboto;
+  margin-left: 1%;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
+
 
 .PhoneInfo2{
     text-align: start;
     font-size: 1.2em;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto;
     display: block;  
 }
 
@@ -63,5 +84,5 @@
 //   }
   
   .tables, .PhoneInfo, .PhoneInfo2 {
-    background-color: hsl(0, 0%, 75%);
+    background-color: #EBEBEB;
   }

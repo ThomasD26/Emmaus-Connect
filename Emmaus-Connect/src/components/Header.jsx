@@ -19,6 +19,8 @@ function header() {
       <style>
         @import
         url("https://fonts.googleapis.com/css2?family=Lato:wght@300;900&family=Permanent+Marker&family=Raleway:wght@900&display=swap");
+        @import
+        url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
       </style>
     </nav>
   );

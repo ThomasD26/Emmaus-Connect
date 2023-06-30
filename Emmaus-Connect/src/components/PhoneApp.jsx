@@ -38,44 +38,55 @@ return (
         Liste des téléphone
     </h1>
     <div className={styles.mainHome}>{phones.map((phone) => (
-      <ul key={phone.ID} className={styles.phoneCard}>
-          <li className={styles.Phonename}>
+      <div key={phone.ID} className={styles.phoneCard}>
+          <ul className={styles.Phonename}>
             {phone.Phonename}
-          </li> 
-          <li className={styles.PhoneInfo}>  <ul className={styles.tables}/>
-            Marque: {phone.Marque}
-          </li>
-          <li className={styles.PhoneInfo}>
-            Système d'exploitation: {phone.Systemeexploitation}
-          </li>
-          <li className={styles.PhoneInfo}>
-            RAM: {phone.Ram}GB
-          </li>
-          <li className={styles.PhoneInfo}>
-            Stockage: {phone.Memoire}GB
-          </li>
-          <li className={styles.PhoneInfo}>
-            Réseau: {phone.Reseau}
-          </li>
-          <li className={styles.PhoneInfo}>
-            Écran: {phone.Ecran}
-          </li>
-          <li className={styles.PhoneInfo}>
-            État global: {phone.Etatglobal}
-          </li>
-          <li className={styles.PhoneInfo}>
-            État de l'écran: {phone.Etatecran}
-          </li>
-          <li className={styles.PhoneInfo}>
-            Capacité de la batterie: {phone.Capacitebatterie}
-          </li>
-          <li className={styles.PhoneInfo}>
-            Chargeur: {phone.Chargeur}
-          </li>
-          <li className={styles.PhoneInfo}>
-            Valeur totale: {phone.valeurTotale}
-          </li>
-        </ul>
+          </ul> 
+          <ul className={styles.PhoneInfo}> 
+            <li className={styles.phoneInfoItem}>Marque:</li> 
+            <li className={styles.PhoneValue}>{phone.Marque}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Système d'exploitation:</li> 
+            <li className={styles.PhoneValue}>{phone.Systemeexploitation}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>RAM: </li>
+            <li className={styles.PhoneValue}>{phone.Ram}GB</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Stockage:</li>
+            <li className={styles.PhoneValue}>{phone.Memoire}GB</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Réseau:</li> 
+            <li className={styles.PhoneValue}>{phone.Reseau}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Écran: </li>
+            <li className={styles.PhoneValue}>{phone.Ecran}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>État global:</li>
+            <li className={styles.PhoneValue}>{phone.Etatglobal}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>État de l'écran:</li>
+            <li className={styles.PhoneValue}>{phone.Etatecran}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Capacité de la batterie:</li>
+            <li className={styles.PhoneValue}>{phone.Capacitebatterie}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Chargeur:</li>
+            <li className={styles.PhoneValue}>{phone.Chargeur}</li>
+          </ul>
+          <ul className={styles.PhoneInfo}>
+            <li className={styles.phoneInfoItem}>Valeur totale:</li>
+            <li className={styles.PhoneValue}>{phone.valeurTotale}</li>
+          </ul>
+        </div>
     ))}
     </div>
   </main>
