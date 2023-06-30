@@ -18,13 +18,13 @@ function calculerValeurTelephone(
     8:80,
   };
   const valeursStockage = {
-    8: 1,
-    16: 2,
-    32: 3.5,
-    64: 5,
-    128: 10,
-    256: 15,
-    512: 20,
+    8: 2,
+    16: 4,
+    32: 7,
+    64: 15,
+    128: 30,
+    256: 60,
+    512: 70,
   };
   const valeursEtatglobal = {
     mauvais: 0,
