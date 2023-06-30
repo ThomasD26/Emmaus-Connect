@@ -233,15 +233,16 @@ const AjouterTel = () => {
             <option value="non">non</option>
           </select>
         </label>  
-        </div>      
-      </form>
-      <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainer}>
         <button
           className={styles.recButton}
           type="submit" >
           Enregistrer
         </button>
       </div>
+        </div>      
+      </form>
+      
       </div>
       </main>
     );
